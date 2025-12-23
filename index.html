@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
+
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
-        
+
         .gradient-text {
             background: linear-gradient(90deg, #3b82f6, #8b5cf6);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-        
+
         .hero-gradient {
             background: linear-gradient(135deg, #1e3a8a 0%, #111827 100%);
         }
-        
+
         .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -51,11 +52,11 @@
             transform: scale(1.1);
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
         }
-        
+
         .nav-link {
             position: relative;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -66,34 +67,34 @@
             background: linear-gradient(90deg, #3b82f6, #8b5cf6);
             transition: width 0.3s ease;
         }
-        
+
         .nav-link:hover::after {
             width: 100%;
         }
-        
+
         .active::after {
             width: 100%;
         }
-        
+
         .skill-pill {
             transition: all 0.3s ease;
         }
-        
+
         .skill-pill:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
-        
+
         .project-card {
             transition: all 0.3s ease;
             background: linear-gradient(145deg, #ffffff, #f9fafb);
         }
-        
+
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        
+
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -105,7 +106,7 @@
             background: linear-gradient(90deg, #3b82f6, #8b5cf6);
             border: 3px solid white;
         }
-        
+
         @media (max-width: 768px) {
             .timeline-item::before {
                 left: -28px;
@@ -113,18 +114,47 @@
         }
 
         @keyframes bounce-slow {
-            0%, 100% { transform: translateY(0);}
-            50% { transform: translateY(-10px);}
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
-        .animate-bounce-slow { animation: bounce-slow 2.5s infinite; }
-        .animate-bounce-delay-1 { animation: bounce-slow 2.5s infinite 0.2s; }
-        .animate-bounce-delay-2 { animation: bounce-slow 2.5s infinite 0.4s; }
-        .animate-bounce-delay-3 { animation: bounce-slow 2.5s infinite 0.6s; }
-        .animate-bounce-delay-4 { animation: bounce-slow 2.5s infinite 0.8s; }
-        .animate-bounce-delay-5 { animation: bounce-slow 2.5s infinite 1s; }
-        .animate-bounce-delay-6 { animation: bounce-slow 2.5s infinite 1.2s; }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 2.5s infinite;
+        }
+
+        .animate-bounce-delay-1 {
+            animation: bounce-slow 2.5s infinite 0.2s;
+        }
+
+        .animate-bounce-delay-2 {
+            animation: bounce-slow 2.5s infinite 0.4s;
+        }
+
+        .animate-bounce-delay-3 {
+            animation: bounce-slow 2.5s infinite 0.6s;
+        }
+
+        .animate-bounce-delay-4 {
+            animation: bounce-slow 2.5s infinite 0.8s;
+        }
+
+        .animate-bounce-delay-5 {
+            animation: bounce-slow 2.5s infinite 1s;
+        }
+
+        .animate-bounce-delay-6 {
+            animation: bounce-slow 2.5s infinite 1.2s;
+        }
     </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800">
     <!-- Navigation -->
     <nav class="fixed w-full bg-white shadow-sm z-50">
@@ -140,8 +170,7 @@
                     <a href="#skills" class="nav-link text-gray-700 hover:text-gray-900">Skills</a>
                     <a href="#projects" class="nav-link text-gray-700 hover:text-gray-900">Projects</a>
                     <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900">Contact</a>
-                    <a href="public/cv_victor_badillo.pdf" 
-                        class="nav-link text-gray-700 hover:text-gray-900" 
+                    <a href="public/cv_victor_badillo.pdf" class="nav-link text-gray-700 hover:text-gray-900"
                         download="Victor_Badillo_CV.pdf">
                         CV
                     </a>
@@ -149,7 +178,8 @@
                 <div class="md:hidden flex items-center">
                     <button id="menu-btn" class="text-gray-500 hover:text-gray-900">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -158,14 +188,20 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
-                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Experience</a>
-                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Skills</a>
-                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Projects</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
-                <a href="public/cv_victor_badillo.pdf" 
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50" 
+                <a href="#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
+                <a href="#about"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
+                <a href="#experience"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Experience</a>
+                <a href="#skills"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Skills</a>
+                <a href="#projects"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Projects</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+                <a href="public/cv_victor_badillo.pdf"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                     download="Victor_Badillo_CV.pdf">
                     CV
                 </a>
@@ -179,14 +215,18 @@
             <div class="flex flex-col items-center text-center">
                 <!-- Profile Image -->
                 <div class="relative mb-8">
-                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                        <div class="w-60 h-60 md:w-72 md:h-72 rounded-full bg-gray-800 overflow-hidden border-4 border-white">
-                            <img src="public/me.jpeg" alt="Víctor Badillo" class="w-full h-full object-cover rounded-full" />
+                    <div
+                        class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <div
+                            class="w-60 h-60 md:w-72 md:h-72 rounded-full bg-gray-800 overflow-hidden border-4 border-white">
+                            <img src="public/me.jpeg" alt="Víctor Badillo"
+                                class="w-full h-full object-cover rounded-full" />
                         </div>
                     </div>
                     <div class="absolute -bottom-5 left-1/2 transform -translate-x-1/2 status-tag">
                         <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center status-icon">
+                            <div
+                                class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center status-icon">
                                 <i class="fas fa-code text-blue-600"></i>
                             </div>
                             <div class="ml-3 w-54">
@@ -198,22 +238,29 @@
                 </div>
 
                 <!-- Name and Title -->
-                <h1 class="text-4xl md:text-5xl font-bold mb-2">Hi, I'm <span class="gradient-text">Víctor Badillo</span></h1>
+                <h1 class="text-4xl md:text-5xl font-bold mb-2">Hi, I'm <span class="gradient-text">Víctor
+                        Badillo</span></h1>
                 <h2 class="text-2xl md:text-3xl font-semibold mb-6">Software Engineer</h2>
-                <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Passionate about AI, backend development and blockchain. A builder with great adaptability to technologies, environments and people.</p>
+                <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Passionate about AI, backend development and
+                    blockchain. A builder with great adaptability to technologies, environments and people.</p>
 
                 <!-- Buttons -->
                 <div class="flex space-x-4 mb-8">
-                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Contact Me</a>
-                    <a href="#projects" class="bg-transparent border-2 border-white hover:bg-white hover:bg-opacity-10 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Explore</a>
+                    <a href="#contact"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Contact
+                        Me</a>
+                    <a href="#projects"
+                        class="bg-transparent border-2 border-white hover:bg-white hover:bg-opacity-10 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Explore</a>
                 </div>
 
                 <!-- Social Media -->
                 <div class="flex space-x-6">
-                    <a href="https://github.com/victor-badillo" class="w-10 h-10 rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 flex items-center justify-center text-white">
+                    <a href="https://github.com/victor-badillo"
+                        class="w-10 h-10 rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 flex items-center justify-center text-white">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/victor-badillo-aldama/" class="w-10 h-10 rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 flex items-center justify-center text-white">
+                    <a href="https://www.linkedin.com/in/victor-badillo-aldama/"
+                        class="w-10 h-10 rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 flex items-center justify-center text-white">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
@@ -229,7 +276,7 @@
                 <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">Get to know more about who I am and what I do</p>
             </div>
-            
+
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
                     <div class="relative">
@@ -246,24 +293,31 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="md:w-2/3 md:pl-12">
                     <h3 class="text-2xl font-semibold mb-6">Who am I?</h3>
                     <p class="text-gray-600 mb-6">
-                        I'm Víctor Nathanael Badillo Aldama, a Software Engineer with a passion for building innovative solutions. 
-                        I studied Computer Science at the University of A Coruña, in the bilingual program, where I developed a strong foundation in software development and problem-solving.
-                        My expertise lies in backend development, artificial intelligence, and blockchain technologies. 
-                        I thrive in dynamic environments where I can apply my technical skills to solve complex problems.
+                        I'm Víctor Nathanael Badillo Aldama, a Software Engineer with a passion for building innovative
+                        solutions.
+                        I studied Computer Science at the University of A Coruña, in the bilingual program, where I
+                        developed a strong foundation in software development and problem-solving.
+                        My expertise lies in backend development, artificial intelligence, and blockchain technologies.
+                        I thrive in dynamic environments where I can apply my technical skills to solve complex
+                        problems.
                     </p>
-                    
+
                     <p class="text-gray-600 mb-6">
-                        What sets me apart is my adaptability - I quickly learn new technologies and adapt to different team environments. 
+                        What sets me apart is my adaptability - I quickly learn new technologies and adapt to different
+                        team environments.
                         I'm not just a developer; I'm a builder who creates solutions that make an impact.
                     </p>
                     <p class="text-gray-600 mb-6">
-                        Beyond code, I value clear communication, empathy, and teamwork. I enjoy collaborating with people from different backgrounds and believe that diverse perspectives lead to stronger solutions. I’m committed to continuous personal and professional growth, and I approach every challenge with curiosity and a positive attitude.
+                        Beyond code, I value clear communication, empathy, and teamwork. I enjoy collaborating with
+                        people from different backgrounds and believe that diverse perspectives lead to stronger
+                        solutions. I’m committed to continuous personal and professional growth, and I approach every
+                        challenge with curiosity and a positive attitude.
                     </p>
-                    
+
                 </div>
             </div>
         </div>
@@ -277,7 +331,7 @@
                 <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">My work journey and professional growth</p>
             </div>
-            
+
             <div class="bg-white p-8 rounded-xl shadow-sm">
                 <div class="flex flex-col md:flex-row">
                     <div class="md:w-1/4 mb-6 md:mb-0">
@@ -288,7 +342,9 @@
                     <div class="md:w-3/4">
                         <h4 class="text-lg font-medium mb-3">Java Full Stack Developer</h4>
                         <p class="text-gray-600 mb-4">
-                            During my internship, I had the opportunity to immerse myself in the professional working culture while developing my technical skills. I worked on both frontend and backend development using modern technologies and architectures.
+                            During my internship, I had the opportunity to immerse myself in the professional working
+                            culture while developing my technical skills. I worked on both frontend and backend
+                            development using modern technologies and architectures.
                         </p>
                         <div class="mb-6">
                             <h5 class="font-medium text-gray-800 mb-2">Key Responsibilities & Learnings:</h5>
@@ -304,12 +360,20 @@
                         <div>
                             <h5 class="font-medium text-gray-800 mb-2">Tech Stack:</h5>
                             <div class="flex flex-wrap gap-2">
-                                <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Java</span>
-                                <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Spring Boot</span>
-                                <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">JavaScript</span>
-                                <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">React</span>
-                                <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">REST</span>
-                                <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Hexagonal Architecture</span>
+                                <span
+                                    class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Java</span>
+                                <span
+                                    class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Spring
+                                    Boot</span>
+                                <span
+                                    class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">JavaScript</span>
+                                <span
+                                    class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">React</span>
+                                <span
+                                    class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">REST</span>
+                                <span
+                                    class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Hexagonal
+                                    Architecture</span>
                             </div>
                         </div>
                     </div>
@@ -324,9 +388,10 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-4">My <span class="gradient-text">Skills</span></h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Technologies I've worked with and areas of expertise</p>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Technologies I've worked with and areas of expertise
+                </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Technical Skills -->
                 <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
@@ -337,32 +402,70 @@
                         <h3 class="text-xl font-semibold">Technical Skills</h3>
                     </div>
                     <div class="flex flex-wrap gap-3">
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Python</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">JavaScript</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Node.js</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Spring Boot</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">React</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">SQL</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Ocaml</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">C++</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Julia</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Java</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Rest API</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Git</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Numpy</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Matplotlib</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">GraphQL</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Docker</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">JIRA</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Confluence</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Machine Learning</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">CUDA</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">NLP</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Computer Vision</span>
-                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">DSA</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Python</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">JavaScript</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Node.js</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Spring
+                            Boot</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">React</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">SQL</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Ocaml</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">C++</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Julia</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Java</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Rest
+                            API</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Git</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Numpy</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Matplotlib</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">GraphQL</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Docker</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">JIRA</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Confluence</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Machine
+                            Learning</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">CUDA</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">NLP</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Computer
+                            Vision</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">DSA</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Snowflake</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Apache
+                            Airflow</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">dbt</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">dlt</span>
+                        <span
+                            class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Terraform</span>
                     </div>
                 </div>
-                
+
                 <!-- Soft Skills -->
                 <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
                     <div class="flex items-center mb-6">
@@ -372,26 +475,47 @@
                         <h3 class="text-xl font-semibold">Soft Skills</h3>
                     </div>
                     <div class="flex flex-wrap gap-3">
-                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Adaptability</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Problem Solving</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Teamwork</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Communication</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Leadership</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Creativity</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Positive attitude</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Inclusivity</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Empathy</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Thinking outside the box</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Conflict Resolution</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Continuous Learning</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Decision-making</span>
-                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Work ethic</span>
+                        <span
+                            class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Adaptability</span>
+                        <span
+                            class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Problem
+                            Solving</span>
+                        <span
+                            class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Teamwork</span>
+                        <span
+                            class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Communication</span>
+                        <span
+                            class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Leadership</span>
+                        <span
+                            class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Creativity</span>
+                        <span
+                            class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Positive
+                            attitude</span>
+                        <span
+                            class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Inclusivity</span>
+                        <span
+                            class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Empathy</span>
+                        <span
+                            class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Thinking
+                            outside the box</span>
+                        <span
+                            class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Conflict
+                            Resolution</span>
+                        <span
+                            class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Continuous
+                            Learning</span>
+                        <span
+                            class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Decision-making</span>
+                        <span
+                            class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Work
+                            ethic</span>
                     </div>
                 </div>
             </div>
             <!-- Language Skills Section -->
             <div class="mt-6">
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300 max-w-4xl mx-auto">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300 max-w-4xl mx-auto">
                     <div class="flex items-center mb-8">
                         <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
                             <i class="fas fa-language text-yellow-600"></i>
@@ -453,7 +577,7 @@
                 <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">Some of my recent work and contributions</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
                 <div class="project-card rounded-xl overflow-hidden shadow-md border-2 border-gray-300 flex flex-col">
@@ -464,30 +588,36 @@
                         <div class="flex justify-between items-start mb-3">
                             <h3 class="text-xl font-semibold">Hough Transform on GPU</h3>
                         </div>
-                        <p class="text-gray-600 mb-4">Design and implementation of the Hough Transform algorithm on GPU using CUDA. Drastic reduction in the computation time of this algorithm, going from hours to minutes applying different techniques.</p>
+                        <p class="text-gray-600 mb-4">Design and implementation of the Hough Transform algorithm on GPU
+                            using CUDA. Drastic reduction in the computation time of this algorithm, going from hours to
+                            minutes applying different techniques.</p>
                         <div class="flex flex-wrap gap-2 mb-4 mt-auto">
                             <span class="text-xs bg-gray-100 px-2 py-1 rounded">C++</span>
                             <span class="text-xs bg-gray-100 px-2 py-1 rounded">CUDA</span>
                             <span class="text-xs bg-gray-100 px-2 py-1 rounded">GPU programming</span>
                         </div>
                         <div class="flex space-x-3 mt-4">
-                            <a href="https://github.com/victor-badillo/houghTransform-Cuda" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 text-sm font-medium w-full text-center">
+                            <a href="https://github.com/victor-badillo/houghTransform-Cuda" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium w-full text-center">
                                 View Code
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 2 -->
                 <div class="project-card rounded-xl overflow-hidden shadow-md border-2 border-gray-300 flex flex-col">
                     <div class="h-48">
-                        <img src="public/music_genres.jpg" alt="Music Genre Classifier" class="w-full h-full object-cover">
+                        <img src="public/music_genres.jpg" alt="Music Genre Classifier"
+                            class="w-full h-full object-cover">
                     </div>
                     <div class="p-6 flex flex-col flex-1">
                         <div class="flex justify-between items-start mb-3">
                             <h3 class="text-xl font-semibold">Music Genre Classifier</h3>
                         </div>
-                        <p class="text-gray-600 mb-4">Classification of music audios in genres using different AI techniques and models.</p>
+                        <p class="text-gray-600 mb-4">Classification of music audios in genres using different AI
+                            techniques and models.</p>
                         <div class="flex flex-wrap gap-2 mb-4 mt-auto">
                             <span class="text-xs bg-gray-100 px-2 py-1 rounded">Julia</span>
                             <span class="text-xs bg-gray-100 px-2 py-1 rounded">Python</span>
@@ -496,21 +626,26 @@
                             <span class="text-xs bg-gray-100 px-2 py-1 rounded">Scikit-learn</span>
                         </div>
                         <div class="flex space-x-3 mt-4">
-                            <a href="https://github.com/victor-badillo/music-genre-classificator" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 text-sm font-medium w-full text-center">View Code</a>
+                            <a href="https://github.com/victor-badillo/music-genre-classificator" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium w-full text-center">View
+                                Code</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 3 -->
                 <div class="project-card rounded-xl overflow-hidden shadow-md border-2 border-gray-300 flex flex-col">
                     <div class="h-48">
-                        <img src="public/segmentation.jpg" alt="Segmentation mammography" class="w-full h-full object-cover">
+                        <img src="public/segmentation.jpg" alt="Segmentation mammography"
+                            class="w-full h-full object-cover">
                     </div>
                     <div class="p-6 flex flex-col flex-1">
                         <div class="flex justify-between items-start mb-3">
                             <h3 class="text-xl font-semibold">Segmentation mammography</h3>
                         </div>
-                        <p class="text-gray-600 mb-4">Segmentation and classification of the breast area in lateral mammograms applying multiple artificial vision techniques.</p>
+                        <p class="text-gray-600 mb-4">Segmentation and classification of the breast area in lateral
+                            mammograms applying multiple artificial vision techniques.</p>
                         <div class="flex flex-wrap gap-2 mb-4 mt-auto">
                             <span class="text-xs bg-gray-100 px-2 py-1 rounded">Python</span>
                             <span class="text-xs bg-gray-100 px-2 py-1 rounded">Pandas</span>
@@ -520,15 +655,56 @@
                             <span class="text-xs bg-gray-100 px-2 py-1 rounded">NumPy</span>
                         </div>
                         <div class="flex space-x-3 mt-4">
-                            <a href="https://github.com/victor-badillo/Segmentation_mammography" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 text-sm font-medium w-full text-center">View Code</a>
+                            <a href="https://github.com/victor-badillo/Segmentation_mammography" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium w-full text-center">View
+                                Code</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Project 4 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-md border-2 border-gray-300 flex flex-col">
+                    <div class="h-48">
+                        <img src="public/dashboard_preview.png" alt="Dashboard Preview"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold">Crypto Market Data Platform</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Architected a scalable ELT platform to ingest and analyze
+                            real-time cryptocurrency data. Built robust ingestion pipelines using Python and dlt,
+                            orchestrated via Apache Airflow in a Dockerized environment. Engineered a star-schema data
+                            warehouse in Snowflake using dbt for modular transformations, ensuring data integrity
+                            through automated testing and CI/CD. Developed an interactive dashboard with Streamlit for
+                            financial metrics visualization and managed infrastructure as code via Terraform.</p>
+                        <div class="flex flex-wrap gap-2 mb-4 mt-auto">
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Python</span>
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Snowflake</span>
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">dbt</span>
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Apache Airflow</span>
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Streamlit</span>
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Terraform</span>
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Docker</span>
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">SQL</span>
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Github Actions</span>
+                        </div>
+                        <div class="flex space-x-3 mt-4">
+                            <a href="https://github.com/victor-badillo/crypto-market-platform" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-blue-600 hover:text-blue-800 text-sm font-medium w-full text-center">View
+                                Code</a>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12">
                 <p class="text-2xl font-medium text-gray-800 mb-4 animate-pulse">The show must go on...</p>
-                <a href="https://github.com/victor-badillo" class="inline-flex items-center px-6 py-3 border-2 border-gray-500 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-purple-600 font-medium transition duration-300">
+                <a href="https://github.com/victor-badillo"
+                    class="inline-flex items-center px-6 py-3 border-2 border-gray-500 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-purple-600 font-medium transition duration-300">
                     <i class="fab fa-github mr-2"></i> View All Projects on GitHub
                 </a>
             </div>
@@ -541,44 +717,58 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Have a project in mind or want to collaborate? Feel free to reach out!</p>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Have a project in mind or want to collaborate? Feel
+                    free to reach out!</p>
             </div>
-            
+
             <div class="flex flex-col items-center">
                 <div class="mb-10">
                     <h3 class="text-xl font-medium mb-6 text-center">Currently Available For</h3>
                     <div class="flex flex-wrap justify-center gap-4">
                         <div class="flex items-center animate-bounce-slow">
-                            <span class="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-transform duration-300 hover:scale-105">Freelance Projects</span>
+                            <span
+                                class="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-transform duration-300 hover:scale-105">Freelance
+                                Projects</span>
                         </div>
                         <div class="flex items-center animate-bounce-delay-1">
-                            <span class="bg-gradient-to-r from-purple-400 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-transform duration-300 hover:scale-105">Collaborations</span>
+                            <span
+                                class="bg-gradient-to-r from-purple-400 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-transform duration-300 hover:scale-105">Collaborations</span>
                         </div>
                         <div class="flex items-center animate-bounce-delay-2">
-                            <span class="bg-gradient-to-r from-green-400 to-green-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-transform duration-300 hover:scale-105">Consulting</span>
+                            <span
+                                class="bg-gradient-to-r from-green-400 to-green-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-transform duration-300 hover:scale-105">Consulting</span>
                         </div>
                         <div class="flex items-center animate-bounce-delay-3">
-                            <span class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-transform duration-300 hover:scale-105">Mentoring</span>
+                            <span
+                                class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-transform duration-300 hover:scale-105">Mentoring</span>
                         </div>
                         <div class="flex items-center animate-bounce-delay-4">
-                            <span class="bg-gradient-to-r from-red-400 to-red-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-transform duration-300 hover:scale-105">Job Offers</span>
+                            <span
+                                class="bg-gradient-to-r from-red-400 to-red-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-transform duration-300 hover:scale-105">Job
+                                Offers</span>
                         </div>
                         <div class="flex items-center animate-bounce-delay-5">
-                            <span class="bg-gradient-to-r from-indigo-400 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-transform duration-300 hover:scale-105">Know New People</span>
+                            <span
+                                class="bg-gradient-to-r from-indigo-400 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-transform duration-300 hover:scale-105">Meet
+                                People</span>
                         </div>
                         <div class="flex items-center animate-bounce-delay-6">
-                            <span class="bg-gradient-to-r from-pink-400 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-transform duration-300 hover:scale-105">Learn</span>
+                            <span
+                                class="bg-gradient-to-r from-pink-400 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-transform duration-300 hover:scale-105">Learn</span>
                         </div>
                     </div>
                 </div>
                 <div class="flex space-x-8 mt-8">
-                    <a href="https://github.com/victor-badillo" target="_blank" class="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+                    <a href="https://github.com/victor-badillo" target="_blank"
+                        class="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
                         <i class="fab fa-github text-3xl text-gray-800"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/victor-badillo-aldama/" target="_blank" class="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+                    <a href="https://www.linkedin.com/in/victor-badillo-aldama/" target="_blank"
+                        class="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
                         <i class="fab fa-linkedin-in text-3xl text-blue-700"></i>
                     </a>
-                    <a href="mailto:vicn.badillo@gmail.com" class="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+                    <a href="mailto:vicn.badillo@gmail.com"
+                        class="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
                         <i class="fas fa-envelope text-3xl text-red-500"></i>
                     </a>
                 </div>
@@ -593,13 +783,14 @@
                 <div class="text-left">
                     <a href="#" class="text-xl font-bold gradient-text">Víctor Badillo</a>
                 </div>
-                
+
                 <div class="text-center">
                     <p class="text-gray-400 text-sm">© 2025 Víctor Badillo. All rights reserved.</p>
                 </div>
-                
+
                 <div class="flex items-center justify-end space-x-6">
-                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-gray-400 hover:text-white"> Back to top
+                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+                        class="text-gray-400 hover:text-white"> Back to top
                         <i class="fas fa-arrow-up text-xl"></i>
                     </button>
                 </div>
@@ -609,25 +800,25 @@
 
     <script>
         // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', function() {
+        document.getElementById('menu-btn').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
+
                     // Close mobile menu if open
                     const mobileMenu = document.getElementById('mobile-menu');
                     if (!mobileMenu.classList.contains('hidden')) {
@@ -638,21 +829,21 @@
         });
 
         // Highlight active navigation link
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
-            
+
             let current = '';
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                
+
                 if (pageYOffset >= sectionTop - 100) {
                     current = section.getAttribute('id');
                 }
             });
-            
+
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
@@ -664,9 +855,9 @@
         // Form submission
         const contactForm = document.querySelector('form');
         if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
+            contactForm.addEventListener('submit', function (e) {
                 e.preventDefault();
-                
+
                 // Here you would typically send the form data to a server
                 alert('Thank you for your message! I will get back to you soon.');
                 this.reset();
@@ -674,4 +865,5 @@
         }
     </script>
 </body>
+
 </html>
